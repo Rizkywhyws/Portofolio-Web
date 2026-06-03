@@ -19,7 +19,7 @@
       <nav>
         <img src="assets/kydev.png" alt="Logo" class="logo" />
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -37,7 +37,14 @@
           </p>
           <div class="hero-buttons">
             <button id="btn1" class="btn-start">Download CV</button>
-            <button id="btn2" class="btn-learn">Contact Me</button>
+            <button id="btn2" class="btn-contact">Contact Me</button>
+            <div id="contactModal" class="modal">
+              <div class="modal-content">
+                <span id="closeModal">&times;</span>
+                <p>Email: kydev@example.com</p>
+                <p>Phone: +62 812-3456-7890</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="hero-image">
@@ -118,4 +125,6 @@
       </div>
     </footer>
   </body>
+
+  <script src="index.js"></script>
 </html>
