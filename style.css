@@ -47,16 +47,17 @@ nav{
 .hero-section {
     min-height: 80vh;
     background: white;
-    display: flex;
+    display: flex
 }
 .hero-content {
+    width: 100%;
     max-width: 1200px;
     justify-content: space-between;
     margin: 0 auto;
     display: flex;
     align-items: center;    
 }
-hero-text {
+.hero-text {
     flex: 1;
 }
 .hero-text h1{
@@ -66,13 +67,33 @@ hero-text {
     margin-bottom: 1rem;
     color: #000000;
     text-shadow: 0 0 12px rgba(255,255,255,0.25);
+    animation: slideLeft 1s ease;
+}
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 .hero-text .highlight {
     color: #855efa;
     text-shadow: 0 0 0.5px #201e20;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow{
+    from {
+        text-shadow: 0 0 5px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 20px #855efa, 0 0 30px #ffffff;
+    }
 }
 .hero-text p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: #000000;
     font-weight: 500;
@@ -83,7 +104,7 @@ hero-text {
     justify-content: flex-end;
 }
 .hero-image img{
-    width: 600px;
+    width: 500px;
     max-width: 100%;
 }
 .hero-buttons {
@@ -124,4 +145,157 @@ hero-text {
     background: #8385fd;
     color: white;
     text-shadow: 0 0 10px #8385fd;
+}
+.about-section {
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.about-header{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.about-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000000;
+    text-shadow: 0 0 12px rgba(255,255,255,0.25);
+    margin-top: 2rem;
+}
+.about-content {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;    
+}
+.about-image img{
+    width: 450px;
+    max-width: 100%;
+    border-radius: 30px;
+    margin-top: 2rem;
+}
+.about-text {
+    flex: 1;
+}
+.underline {
+    width: 200px;
+    height: 5px;
+    background: #855efa;
+    margin: 0 auto;
+    border-radius: 999px;
+    align-items: center;
+}
+.about-text p {
+    margin-left: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: black;
+    font-weight: 500;
+}
+.services-section {
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.services-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.services-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000000;
+    text-shadow: 0 0 12px rgba(255,255,255,0.25);
+    margin-top: 2rem;
+}
+.services-content {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;    
+}
+.service-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    margin: 1rem;
+}
+.service-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+.service-card p {
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.5;
+}
+.footer{
+    background: linear-gradient(135deg, #8385fd, #6a67ce);
+}
+.footer-container {
+    width: 100%;
+    padding: 70px 20px 30px;
+    margin: 0 auto;
+}
+.footer-icon {
+    display: flex;
+    justify-content: center;
+}
+.footer-icon a {
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.footer-icon a:hover {
+    background: white;
+    color: #8385fd;
+    transition: 0.3s;
+}
+.footer-icon a i {
+    font-size: 1.5rem;
+}
+.footer-nav{
+    margin: 20px 0;
+}
+.footer-nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+.footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: 0.3s;
+    margin: 10px;
+}
+.footer-nav ul li a:hover {
+    color: #4a4dff;
+    text-shadow: 0 0 10px #4a4dff;
+}
+.footer-bottom {
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+.dev {
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-left: 3px;
 }
